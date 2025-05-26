@@ -1,0 +1,19 @@
+configs:
+  cm:
+    kustomize.buildOptions: --enable-helm
+  styles: |
+    :root {
+      --primary: #115D5C;
+    }
+    .sidebar,
+    .nav-bar {
+      background: var(--primary);
+    }
+    .argo-button--base,
+    .argo-button--base:hover {
+      background: var(--primary) !important;
+    }
+    .argo-button--base:hover {
+      background: var(--primary) !important;
+      opacity: 0.8 !important;
+    }

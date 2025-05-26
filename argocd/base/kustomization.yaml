@@ -1,8 +1,11 @@
+# kustomize build --enable-helm argocd/base/ | kubectl diff -f -
+# kustomize build --enable-helm argocd/base/ | kubectl apply -f -
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
   - namespace.yaml
+  - argcd-install.yaml
 
 helmCharts:
   - name: argo-cd
